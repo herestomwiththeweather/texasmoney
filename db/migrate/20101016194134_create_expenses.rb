@@ -4,7 +4,7 @@ class CreateExpenses < ActiveRecord::Migration
       t.integer :year
       t.decimal :amount
       t.integer :category_id
-      t.integer :expense_id
+      t.integer :obj_expense_id
       t.integer :vendor_id
       t.datetime :payment_date
       t.timestamps

@@ -1,3 +1,6 @@
 class Expense < ActiveRecord::Base
-  attr_accessible :year, :amount, :category_id, :expense_id, :vendor_id, :payment_date
+  belongs_to :category
+  belongs_to :obj_expense
+  belongs_to :vendor
+  attr_accessible :year, :amount, :category_id, :obj_expense_id, :vendor_id, :payment_date
 end

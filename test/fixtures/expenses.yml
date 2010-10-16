@@ -1,0 +1,15 @@
+one:
+  year: 1
+  amount: 9.99
+  category_id: 1
+  expense_id: 1
+  vendor_id: 1
+  payment_date: 2010-10-16 14:41:34
+
+two:
+  year: 1
+  amount: 9.99
+  category_id: 1
+  expense_id: 1
+  vendor_id: 1
+  payment_date: 2010-10-16 14:41:34

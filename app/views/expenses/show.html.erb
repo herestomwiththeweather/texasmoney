@@ -1,0 +1,32 @@
+<% title "Expense" %>
+
+<p>
+  <strong>Year:</strong>
+  <%=h @expense.year %>
+</p>
+<p>
+  <strong>Amount:</strong>
+  <%=h @expense.amount %>
+</p>
+<p>
+  <strong>Category:</strong>
+  <%=h @expense.category_id %>
+</p>
+<p>
+  <strong>Expense:</strong>
+  <%=h @expense.expense_id %>
+</p>
+<p>
+  <strong>Vendor:</strong>
+  <%=h @expense.vendor_id %>
+</p>
+<p>
+  <strong>Payment Date:</strong>
+  <%=h @expense.payment_date %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_expense_path(@expense) %> |
+  <%= link_to "Destroy", @expense, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", expenses_path %>
+</p>

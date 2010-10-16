@@ -1,0 +1,27 @@
+<% title "Expenses" %>
+
+<table>
+  <tr>
+    <th>Year</th>
+    <th>Amount</th>
+    <th>Category</th>
+    <th>Expense</th>
+    <th>Vendor</th>
+    <th>Payment Date</th>
+  </tr>
+  <% for expense in @expenses %>
+    <tr>
+      <td><%=h expense.year %></td>
+      <td><%=h expense.amount %></td>
+      <td><%=h expense.category_id %></td>
+      <td><%=h expense.expense_id %></td>
+      <td><%=h expense.vendor_id %></td>
+      <td><%=h expense.payment_date %></td>
+      <td><%= link_to "Show", expense %></td>
+      <td><%= link_to "Edit", edit_expense_path(expense) %></td>
+      <td><%= link_to "Destroy", expense, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Expense", new_expense_path %></p>

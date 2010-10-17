@@ -1,0 +1,14 @@
+<% title "Categories" %>
+
+<%= will_paginate(@categories) %>
+<table>
+  <tr>
+    <th>Category</th>
+  </tr>
+  <% for category in @categories %>
+    <tr>
+      <td><%= link_to h(category.name), category %></td>
+    </tr>
+  <% end %>
+</table>
+<%= will_paginate(@categories) %>

@@ -1,18 +1,18 @@
-<% title @vendor.name %>
+<% title @category.name %>
 
 <%= will_paginate(@expenses) %>
 <table>
   <tr>
     <th>Amount</th>
-    <th>Category</th>
     <th>Expense</th>
+    <th>Vendor</th>
     <th>Payment Date</th>
   </tr>
   <% for expense in @expenses %>
     <tr>
       <td><%=h expense.amount %></td>
-      <td><%= link_to h(expense.category.name), expense.category %></td>
       <td><%=h expense.obj_expense.name %></td>
+      <td><%= link_to h(expense.vendor.name), expense.vendor %></td>
       <td><%=h expense.payment_date %></td>
     </tr>
   <% end %>

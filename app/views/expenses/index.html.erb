@@ -12,7 +12,7 @@
   <% for expense in @expenses %>
     <tr>
       <td><%=h expense.amount %></td>
-      <td><%=h expense.category.name %></td>
+      <td><%= link_to h(expense.category.name), expense.category %></td>
       <td><%=h expense.obj_expense.name %></td>
       <td><%= link_to h(expense.vendor.name), expense.vendor %></td>
       <td><%=h expense.payment_date %></td>
@@ -20,5 +20,3 @@
   <% end %>
 </table>
 <%= will_paginate(@expenses) %>
-
-<p><%= link_to "New Expense", new_expense_path %></p>

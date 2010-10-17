@@ -1,0 +1,14 @@
+<% title "Objects of Expense" %>
+
+<%= will_paginate(@obj_expenses) %>
+<table>
+  <tr>
+    <th>Object of Expense</th>
+  </tr>
+  <% for obj_expense in @obj_expenses %>
+    <tr>
+      <td><%= link_to h(obj_expense.name), obj_expense %></td>
+    </tr>
+  <% end %>
+</table>
+<%= will_paginate(@obj_expenses) %>

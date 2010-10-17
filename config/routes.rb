@@ -2,6 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :expenses
   map.resources :vendors
   map.resources :categories
+  map.resources :obj_expenses
 
   # The priority is based upon order of creation: first created -> highest priority.
 

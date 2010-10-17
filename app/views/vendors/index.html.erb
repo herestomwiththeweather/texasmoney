@@ -1,0 +1,16 @@
+<% title "Vendors" %>
+
+<%= will_paginate(@vendors) %>
+<table>
+  <tr>
+    <th>Vendor</th>
+  </tr>
+  <% for vendor in @vendors %>
+    <tr>
+      <td><%= link_to h(vendor.name), vendor %></td>
+    </tr>
+  <% end %>
+</table>
+<%= will_paginate(@vendors) %>
+
+<p><%= link_to "New Vendor", new_vendor_path %></p>

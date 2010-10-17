@@ -7,7 +7,7 @@
     <th>Category</th>
     <th>Expense</th>
     <th>Vendor</th>
-    <th>Payment Date</th>
+    <th>Date</th>
   </tr>
   <% for expense in @expenses %>
     <tr>
@@ -15,7 +15,7 @@
       <td><%= link_to h(expense.category.name), expense.category %></td>
       <td><%=h expense.obj_expense.name %></td>
       <td><%= link_to h(expense.vendor.name), expense.vendor %></td>
-      <td><%=h expense.payment_date %></td>
+      <td><%=h expense.payment_date.strftime("%m/%d/%Y") %></td>
     </tr>
   <% end %>
 </table>
